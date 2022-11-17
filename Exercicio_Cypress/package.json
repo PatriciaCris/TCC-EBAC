@@ -1,0 +1,29 @@
+{
+  "name": "Exercicio_Cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "npx cypress run --browser chrome",
+    "cy:open": "npx cypress open",
+    "cy:report": "cypress run --record --key 13157157-dcfd-4c28-b717-cdb39c5c67d6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatriciaCris/Exercicio_Cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatriciaCris/Exercicio_Cypress/issues"
+  },
+  "homepage": "https://github.com/PatriciaCris/Exercicio_Cypress#readme",
+  "devDependencies": {
+    "cypress": "^9.6.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^6.3.1"
+  }
+}
