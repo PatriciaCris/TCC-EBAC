@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+let token = 'YWRtaW5fZWJhYzpAYWRtaW4hJmJAYyEyMDIy'
+
 describe('Testes de Cupons', () => {
     
     before(() => {
@@ -16,7 +18,7 @@ describe('Testes de Cupons', () => {
             method: 'GET',
             url: 'coupons',
             headers: {
-                authorization: 'YWRtaW5fZWJhYzpAYWRtaW4hJmJAYyEyMDIy'
+                authorization: token
             }
         }).should((response) => {
             cy.log(response)
@@ -29,7 +31,7 @@ describe('Testes de Cupons', () => {
             method: 'GET',
             url: 'coupons/8148',
             headers: {
-                authorization: 'YWRtaW5fZWJhYzpAYWRtaW4hJmJAYyEyMDIy'
+                authorization: token
             }
         }).should((response) => {
             cy.log(response)
