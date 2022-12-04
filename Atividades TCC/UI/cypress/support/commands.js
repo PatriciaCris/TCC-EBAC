@@ -23,3 +23,29 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('addProdutoTipo1', (produto, tamanho, cor, quantidade) => {
+
+    cy.get('[class="product-block grid"]').contains(produto).click()
+    
+    cy.get(tamanho).click()
+
+    cy.get(cor).click()
+
+    cy.get('.input-text').clear().type(quantidade)
+
+    cy.get('.single_add_to_cart_button').click()
+
+    cy.get('.dropdown-toggle > .mini-cart-items').should('contain', quantidade) 
+
+})
+
+Cypress.Commands.add('addProdutoTipo2', (produto) => {
+
+    cy.get('.tbay-woocommerce-breadcrumb > :nth-child(1) > a').click()
+
+    cy.get('[class="product-block grid"]').contains(produto).click()
+
+    cy.get('.single_add_to_cart_button').click()
+
+})
